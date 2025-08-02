@@ -4,16 +4,16 @@ public class Solution {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String a = sc.next();
-        String answer = "";
+        String str = "";
         
         for(int i = 0; i < a.length(); i++){
             char c = a.charAt(i);
-            if(Character.isUpperCase(c)){
-                answer += Character.toLowerCase(c);
+            if(Character.isLowerCase(c)){
+                str += Character.toUpperCase(c);
             }else{
-                answer += Character.toUpperCase(c);
+                str += Character.toLowerCase(c);
             }
         }
-        System.out.println(answer);
+        System.out.println(str);
     }
 }
