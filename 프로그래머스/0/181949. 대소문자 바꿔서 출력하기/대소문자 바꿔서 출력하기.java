@@ -8,10 +8,10 @@ public class Solution {
         
         for(int i = 0; i < a.length(); i++){
             char c = a.charAt(i);
-            if(Character.isLowerCase(c)){
-                str += Character.toUpperCase(c);
-            }else{
+            if(Character.isUpperCase(c)){
                 str += Character.toLowerCase(c);
+            }else{
+                str += Character.toUpperCase(c);
             }
         }
         System.out.println(str);
