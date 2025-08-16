@@ -1,29 +1,26 @@
 import java.util.*;
 
 class Solution {
-    public ArrayList<Integer> solution(int l, int r) {
-        ArrayList<Integer> list = new ArrayList<>();
-
-        for (int i = l; i <= r; i++) {
-            String s = String.valueOf(i);
-            boolean onlyZeroAndFive = true;
-
-            for (char c : s.toCharArray()) {
-                if (c != '0' && c != '5') {
-                    onlyZeroAndFive = false;
+    public ArrayList solution(int l, int r) {
+        ArrayList<Integer> answer = new ArrayList<>();
+        
+        for(int i = l; i <= r; i++){
+            String str = String.valueOf(i);
+            boolean flag = true;
+            for(int j = 0; j < str.length(); j++){
+                if(str.charAt(j) != '5' && str.charAt(j) != '0'){
+                    flag = false;
                     break;
                 }
             }
-
-            if (onlyZeroAndFive) {
-                list.add(i);
+            if(flag == true){
+                answer.add(Integer.parseInt(str));
             }
+            
         }
-
-        if (list.isEmpty()) {
-            list.add(-1);
+        if(answer.isEmpty()){
+            answer.add(-1);
         }
-
-        return list;
+        return answer;
     }
 }
