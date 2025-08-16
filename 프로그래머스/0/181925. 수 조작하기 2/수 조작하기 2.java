@@ -1,26 +1,17 @@
-import java.util.*;
-import java.io.*;
-
 class Solution {
     public String solution(int[] numLog) {
-
-        ArrayList<String> answer = new ArrayList<>();
-        String str = "";
-        
+        String answer = "";
         for(int i = 0; i < numLog.length -1; i++){
-            if(numLog[i+1] - numLog[i] == 1){
-                answer.add("w");
-            }else if(numLog[i+1] - numLog[i] == -1){
-                answer.add("s");
-            }else if(numLog[i+1] - numLog[i] == 10){
-                answer.add("d");
+            if(numLog[i] - numLog[i+1] == 1){
+                answer += "s";
+            }else if(numLog[i] - numLog[i+1] == -1){
+                answer += "w";
+            }else if(numLog[i] - numLog[i+1] == 10){
+                answer += "a";
             }else{
-                answer.add("a");
+                answer += "d";
             }
         }
-        for(int i = 0; i < answer.size(); i++){
-            str += answer.get(i);
-        }
-        return str;
+        return answer;
     }
 }
