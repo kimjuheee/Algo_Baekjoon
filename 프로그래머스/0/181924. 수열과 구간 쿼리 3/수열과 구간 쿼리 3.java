@@ -3,13 +3,13 @@ class Solution {
         int[] answer = {};
         
         for(int i = 0; i < queries.length; i++){
-            int first = queries[i][0];
-            int second = queries[i][1];
-            
+            int front = queries[i][0];
+            int back = queries[i][1];
             int temp = 0;
-            temp = arr[first];
-            arr[first] = arr[second];
-            arr[second] = temp;
+            
+            temp = arr[front];
+            arr[front] = arr[back];
+            arr[back] = temp;
         }
         return arr;
     }
