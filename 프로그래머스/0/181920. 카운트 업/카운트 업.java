@@ -2,13 +2,12 @@ import java.util.*;
 
 class Solution {
     public ArrayList solution(int start_num, int end_num) {
-        int[] answer = {};
-        ArrayList<Integer> list = new ArrayList<>();
+        ArrayList<Integer> answer = new ArrayList<>();
         
         for(int i = start_num; i <= end_num; i++){
-            list.add(i);
+            answer.add(i);
         }
         
-        return list;
+        return answer;
     }
 }
