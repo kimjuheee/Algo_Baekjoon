@@ -6,19 +6,9 @@ class Solution {
         
         HashMap<String, Integer> map = new HashMap<>();
         
-        for(String p : participant){
-            map.put(p, map.getOrDefault(p, 0) + 1);
+        for(String s : participant){
+            System.out.println(s);
         }
-        
-        for(String c : completion){
-            map.put(c, map.get(c) - 1);
-        }
-        
-        for(String key : map.keySet()){
-            if(map.get(key) != 0){
-                return key;
-            }
-        }
-            return answer;
+        return answer;
     }
 }
