@@ -2,6 +2,8 @@ import java.util.*;
 
 class Solution {
     public int solution(int[] nums) {
+        int answer = 0;
+        
         HashSet<Integer> set = new HashSet<>();
         
         for(int num : nums){
@@ -9,8 +11,7 @@ class Solution {
         }
         
         int maxSelect = nums.length / 2;
-        int typeCount = set.size();
-        
-        return Math.min(maxSelect, typeCount);
+        int type = set.size();
+        return Math.min(maxSelect, type);
     }
 }
